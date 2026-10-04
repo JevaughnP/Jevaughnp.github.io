@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jevaughn | Cybersecurity &amp; Software</title>
+<meta name="description" content="Computer science student building toward a SOC analyst career. Projects in Python, Lua, Pine Script, and security.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbfbf9;
+    --ink: #17181a;
+    --muted: #6b6f76;
+    --line: #e4e4e0;
+    --accent: #2f55d4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141517;
+      --ink: #ececea;
+      --muted: #9a9ea6;
+      --line: #2a2c30;
+      --accent: #8aa4ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 40rem; margin: 0 auto; padding: 6rem 1.5rem 4rem; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  h1 {
+    font-size: clamp(2.6rem, 9vw, 4.25rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    font-weight: 700;
+    margin: 0 0 1.5rem;
+  }
+  .lede { font-size: 1.25rem; line-height: 1.5; margin: 0 0 1rem; max-width: 34rem; }
+  .sub { color: var(--muted); margin: 0; }
+
+  section { margin-top: 5rem; }
+  h2 { font-size: 1rem; font-weight: 700; margin: 0 0 1.25rem; letter-spacing: 0; }
+
+  .projects { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .projects li { border-bottom: 1px solid var(--line); padding: 1.25rem 0; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+  .row h3 { font-size: 1.125rem; font-weight: 500; margin: 0; }
+  .status { font-size: 0.875rem; color: var(--muted); white-space: nowrap; }
+  .status.done { color: var(--accent); }
+  .projects p { margin: 0.35rem 0 0; color: var(--muted); max-width: 34rem; }
+  .stack { font-size: 0.9rem; margin-top: 0.5rem; color: var(--muted); }
+
+  .skills { display: grid; grid-template-columns: 7rem 1fr; gap: 0.6rem 1rem; margin: 0; }
+  .skills dt { color: var(--muted); }
+  .skills dd { margin: 0; }
+
+  .contact { margin: 0; }
+  .contact a { margin-right: 1.5rem; }
+
+  footer { margin-top: 5rem; color: var(--muted); font-size: 0.875rem; }
+
+  @media (max-width: 30rem) {
+    main { padding-top: 4rem; }
+    .skills { grid-template-columns: 1fr; gap: 0; }
+    .skills dd { margin-bottom: 0.8rem; }
+    .row { flex-direction: column; gap: 0.1rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Jevaughn</h1>
+    <p class="lede">I'm a computer science student building toward a career as a SOC analyst. I write code, break things in labs, and document what I learn.</p>
+    <p class="sub">Georgia State University Perimeter College &middot; Atlanta, GA</p>
+  </header>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul class="projects">
+      <!-- TODO: replace each href="#" with your GitHub repo link as you finish each project -->
+      <li>
+        <div class="row">
+          <h3><a href="#">Chart pattern indicator</a></h3>
+          <span class="status done">Live on TradingView</span>
+        </div>
+        <p>A technical analysis indicator that detects chart patterns directly on the price chart.</p>
+        <div class="stack">Pine Script</div>
+      </li>
+      <li>
+        <div class="row">
+          <h3><a href="#">Roblox game development</a></h3>
+          <span class="status done">Freelance</span>
+        </div>
+        <p>Gameplay systems and scripts built for clients under DoBigStudios.</p>
+        <div class="stack">Lua</div>
+      </li>
+      <li>
+        <div class="row">
+          <h3><a href="#">Roblox anti-exploit module</a></h3>
+          <span class="status">Planned</span>
+        </div>
+        <p>Server-side checks that catch speed, teleport, and remote-spam exploits, then log and kick offenders.</p>
+        <div class="stack">Lua</div>
+      </li>
+      <li>
+        <div class="row">
+          <h3><a href="#">SSH log analyzer</a></h3>
+          <span class="status">Planned</span>
+        </div>
+        <p>Reads auth logs, flags brute-force login attempts by IP, and writes a summary report.</p>
+        <div class="stack">Python</div>
+      </li>
+      <li>
+        <div class="row">
+          <h3><a href="#">Password checker</a></h3>
+          <span class="status">Planned</span>
+        </div>
+        <p>Scores password strength and checks for known breaches without sending the full password anywhere.</p>
+        <div class="stack">Python, HTML, CSS, JavaScript</div>
+      </li>
+      <li>
+        <div class="row">
+          <h3><a href="#">Home SOC lab</a></h3>
+          <span class="status">Planned</span>
+        </div>
+        <p>A virtual lab running Wazuh, with simulated attacks and a write-up of the alerts it caught.</p>
+        <div class="stack">Wazuh, VirtualBox</div>
+      </li>
+      <li>
+        <div class="row">
+          <h3><a href="#">Threat intel dashboard</a></h3>
+          <span class="status">Planned</span>
+        </div>
+        <p>Pulls free threat feeds into a database and shows them in a searchable web dashboard.</p>
+        <div class="stack">Python, Flask, SQLite, HTML</div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <dl class="skills">
+      <dt>Working with</dt>
+      <dd>Lua, Pine Script</dd>
+      <dt>Learning</dt>
+      <dd>Python, HTML and CSS, Linux</dd>
+      <dt>Studying for</dt>
+      <dd>CompTIA Security+, CCNA</dd>
+      <dt>Practicing on</dt>
+      <dd>TryHackMe, PicoCTF</dd>
+    </dl>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="contact">
+      <!-- TODO: swap in your real email, GitHub, and LinkedIn URLs -->
+      <a href="mailto:you@example.com">Email</a>
+      <a href="https://github.com/your-username">GitHub</a>
+      <a href="https://www.linkedin.com/in/your-username">LinkedIn</a>
+    </p>
+  </section>
+
+  <footer>Last updated October 2026</footer>
+</main>
+</body>
+</html>
